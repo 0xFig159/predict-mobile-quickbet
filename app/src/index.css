@@ -1,0 +1,301 @@
+/* ─── Neon Sportsbook Theme ─── */
+:root {
+  --bg: #0a0e1a;
+  --bg-secondary: #111827;
+  --panel: #1a1f35;
+  --panel-hover: #232b45;
+  --accent: #00f5d4;
+  --accent-dim: #00b8a2;
+  --danger: #ff3b5c;
+  --danger-bg: rgba(255, 59, 92, 0.12);
+  --success: #00e676;
+  --success-bg: rgba(0, 230, 118, 0.12);
+  --warning: #ffab00;
+  --text: #e8eaed;
+  --text-dim: #8892a4;
+  --border: #2a3250;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+input, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* ─── Utility classes ─── */
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 16px;
+  width: 100%;
+}
+
+.card {
+  background: var(--panel);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  padding: 16px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #0a0e1a;
+}
+
+.btn-primary:hover {
+  background: var(--accent-dim);
+}
+
+.btn-secondary {
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  background: var(--panel-hover);
+}
+
+.btn-danger {
+  background: var(--danger);
+  color: #fff;
+}
+
+.btn-danger:hover {
+  opacity: 0.9;
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ─── Bottom bar ─── */
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--panel);
+  border-top: 1px solid var(--border);
+  padding: 12px 16px;
+  padding-bottom: max(12px, env(safe-area-inset-bottom));
+  z-index: 100;
+}
+
+.bottom-bar .container {
+  display: flex;
+  gap: 8px;
+}
+
+/* ─── Nav tabs ─── */
+.nav-tabs {
+  display: flex;
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-tab {
+  flex: 1;
+  min-width: 80px;
+  padding: 12px 8px;
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 13px;
+  font-weight: 500;
+  background: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.nav-tab.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.nav-tab:hover {
+  color: var(--text);
+  background: var(--bg-secondary);
+}
+
+/* ─── Status badges ─── */
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge-pending {
+  background: rgba(255, 171, 0, 0.15);
+  color: var(--warning);
+}
+
+.badge-redeemed {
+  background: var(--success-bg);
+  color: var(--success);
+}
+
+.badge-expired {
+  background: var(--danger-bg);
+  color: var(--danger);
+}
+
+/* ─── Side selector ─── */
+.side-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.side-btn {
+  padding: 16px 8px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-secondary);
+  border: 2px solid transparent;
+  color: var(--text-dim);
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.side-btn.selected-up {
+  border-color: var(--success);
+  color: var(--success);
+  background: var(--success-bg);
+}
+
+.side-btn.selected-down {
+  border-color: var(--danger);
+  color: var(--danger);
+  background: var(--danger-bg);
+}
+
+.side-btn.selected-range {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(0, 245, 212, 0.1);
+}
+
+.side-btn .side-label {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.side-btn .side-odds {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+button[data-dapp-kit] {
+  background: var(--accent) !important;
+  color: #fff !important;
+  border-radius: 8px !important;
+  border: none !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  padding: 8px 20px !important;
+  font-size: 14px !important;
+  transition: opacity .15s !important;
+}
+button[data-dapp-kit]:hover {
+  opacity: .85 !important;
+}
+
+
+/* themed connect button */
+html button[data-dapp-kit] {
+  background: var(--accent) !important;
+  color: #fff !important;
+  border-radius: 8px !important;
+  border: none !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  padding: 6px 16px !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+  transition: opacity .15s !important;
+  min-height: 32px !important;
+}
+html button[data-dapp-kit]:hover {
+  opacity: .85 !important;
+}
+
+/* ─── Demo badge ─── */
+.demo-badge {
+  background: var(--accent, #00f5d4);
+  color: #000;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: default;
+}
+

@@ -1,0 +1,40 @@
+{
+  "name": "predict-mobile-quickbet",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vp dev --port 31720",
+    "build": "vp build",
+    "lint": "vp lint .",
+    "preview": "vp preview --port 31720",
+    "typecheck": "tsc --noEmit",
+    "testnet:deploy": "bun run ../scripts/deploy.ts",
+    "testnet:seed": "bun run ../scripts/seed-demo.ts"
+  },
+  "dependencies": {
+    "@mysten/dapp-kit": "^0.14.50",
+    "@mysten/sui": "^1.2.0",
+    "@tanstack/react-query": "^5.62.0",
+    "i18next": "^26.3.1",
+    "i18next-browser-languagedetector": "^8.2.1",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "react-i18next": "^17.0.8",
+    "react-router-dom": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.12.3",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "globals": "^17.6.0",
+    "typescript": "~6.0.2",
+    "vite": "npm:@voidzero-dev/vite-plus-core@latest",
+    "vite-plus": "latest"
+  },
+  "overrides": {
+    "vite": "npm:@voidzero-dev/vite-plus-core@latest",
+    "vitest": "4.1.9"
+  }
+}

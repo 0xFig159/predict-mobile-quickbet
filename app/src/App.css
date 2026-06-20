@@ -1,0 +1,284 @@
+/* App-level page layout */
+.page {
+  flex: 1;
+  padding: 16px 0;
+  padding-bottom: 80px;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.page-header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.page-header p {
+  font-size: 14px;
+  color: var(--text-dim);
+}
+
+.hero-logo {
+  width: 80px;
+  height: 80px;
+  margin: 24px auto 16px;
+  display: block;
+  border-radius: var(--radius-lg);
+}
+
+.hero-title {
+  font-size: 28px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.hero-subtitle {
+  font-size: 14px;
+  color: var(--text-dim);
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.hero-cta {
+  margin: 24px 0;
+}
+
+.network-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.network-badge.testnet {
+  background: rgba(255, 171, 0, 0.15);
+  color: var(--warning);
+}
+
+.network-badge.mainnet {
+  background: var(--success-bg);
+  color: var(--success);
+}
+
+.wallet-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+}
+
+.wallet-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+.wallet-address {
+  font-family: monospace;
+  font-size: 12px;
+  color: var(--accent);
+}
+
+.diagnostic-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.diagnostic-item:last-child {
+  border-bottom: none;
+}
+
+.diagnostic-label {
+  color: var(--text-dim);
+}
+
+.diagnostic-value {
+  font-family: monospace;
+  font-size: 12px;
+  word-break: break-all;
+  max-width: 200px;
+  text-align: right;
+}
+
+.explorer-link {
+  color: var(--accent);
+  font-family: monospace;
+  font-size: 12px;
+}
+
+.size-input-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.size-input-group label {
+  font-size: 14px;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+
+.size-input-group input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.size-input-group .unit {
+  color: var(--text-dim);
+  font-size: 13px;
+}
+
+.receipt-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.receipt-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.receipt-card-market {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.receipt-card-detail {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-bottom: 4px;
+}
+
+.receipt-card-detail strong {
+  color: var(--text);
+}
+
+.submission-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.submission-item {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+}
+
+.submission-item h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--accent);
+}
+
+.submission-item p {
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+.copy-btn {
+  background: none;
+  color: var(--accent);
+  font-size: 12px;
+  padding: 2px 8px;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.copy-btn:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px 16px;
+  color: var(--text-dim);
+}
+
+.empty-state p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.error-state {
+  text-align: center;
+  padding: 24px 16px;
+  color: var(--danger);
+  font-size: 13px;
+}
+
+.fee-badge {
+  display: inline-block;
+  font-size: 11px;
+  color: var(--text-dim);
+  margin-top: 4px;
+}
+
+.market-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.market-card-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.market-card-price {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.market-card-change {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.market-card-change.positive {
+  color: var(--success);
+}
+
+.market-card-change.negative {
+  color: var(--danger);
+}

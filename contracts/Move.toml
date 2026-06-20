@@ -1,0 +1,7 @@
+[package]
+name = "QuickBetReceipt"
+version = "0.0.1"
+edition = "2024.beta"
+
+[addresses]
+quickbet_receipt = "0x0"

@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.vite/
+*.tsbuildinfo
+.env*.local
+
+# Demo videos and screenshots
+demo/
+
+# Local env
+.env
+app/.env
