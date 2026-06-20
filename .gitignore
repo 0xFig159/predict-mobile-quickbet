@@ -10,3 +10,6 @@ demo/
 # Local env
 .env
 app/.env
+
+# Move build artifacts
+contracts/build/
